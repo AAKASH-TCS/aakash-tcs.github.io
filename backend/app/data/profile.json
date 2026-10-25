@@ -1,0 +1,311 @@
+{
+  "name": "Aakash T C S",
+  "initials": "AT",
+  "headline": "Generative AI Engineer",
+  "roles": [
+    "Generative AI Engineer",
+    "Agentic AI Builder",
+    "RAG & GraphRAG Engineer",
+    "AI Automation Enthusiast"
+  ],
+  "tagline": "I build agentic AI systems, RAG pipelines and LLM automations that take the busywork off people's plates, so they can focus on what matters.",
+  "location": "India",
+  "availability": "AI Engineer at Movate · building agentic AI",
+  "resumeUrl": "/Aakash-TCS-Resume.pdf",
+  "email": "aakashtcs123@gmail.com",
+  "socials": {
+    "github": "",
+    "linkedin": "https://www.linkedin.com/in/aakash-tcs-6b2604208/",
+    "x": ""
+  },
+  "about": [
+    "I'm an AI Engineer at Movate, where I design multi-agent LangGraph workflows, RAG and GraphRAG pipelines, and LLM integrations for enterprise clients such as Alcatel-Lucent Enterprise and Nokia.",
+    "My work runs from prompt and retrieval design to production Python services: tool-calling agents over MCP, streaming responses over SSE, and the guardrails, logging and session isolation that keep them dependable. I'm always asking how AI can make someone's day a little easier."
+  ],
+  "stats": [
+    {
+      "value": 2,
+      "suffix": "+",
+      "label": "Years as an AI Engineer"
+    },
+    {
+      "value": 200,
+      "suffix": "+",
+      "label": "Production users on my agent chatbot"
+    },
+    {
+      "value": 4,
+      "suffix": "",
+      "label": "LLM platforms integrated"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "Enterprise clients (ALE · Nokia)"
+    }
+  ],
+  "skills": [
+    {
+      "group": "LLM & Agent Frameworks",
+      "icon": "brain",
+      "items": [
+        "LangChain",
+        "LangGraph",
+        "Model Context Protocol (MCP)",
+        "ReAct agents",
+        "Tool calling",
+        "Stateful workflows",
+        "Prompt engineering"
+      ]
+    },
+    {
+      "group": "RAG & Retrieval",
+      "icon": "search",
+      "items": [
+        "RAG",
+        "GraphRAG",
+        "Contextual retrieval",
+        "Semantic chunking",
+        "Embeddings",
+        "Reranking",
+        "Vector search"
+      ]
+    },
+    {
+      "group": "Models & Platforms",
+      "icon": "cpu",
+      "items": [
+        "Azure OpenAI (GPT-4o)",
+        "Gemini / Vertex AI",
+        "Amazon Bedrock (Claude)",
+        "Groq"
+      ]
+    },
+    {
+      "group": "Data & Vector Stores",
+      "icon": "database",
+      "items": [
+        "Pandas",
+        "MySQL",
+        "BigQuery",
+        "Neo4j",
+        "ArangoDB",
+        "FAISS",
+        "Chroma",
+        "Databricks Vector Search"
+      ]
+    },
+    {
+      "group": "Languages & Backend",
+      "icon": "server",
+      "items": [
+        "Python",
+        "SQL",
+        "REST APIs",
+        "Flask",
+        "FastAPI",
+        "Streamlit",
+        "Server-Sent Events"
+      ]
+    },
+    {
+      "group": "Cloud & Serverless",
+      "icon": "cloud",
+      "items": [
+        "Microsoft Azure",
+        "Google Cloud",
+        "AWS Lambda",
+        "Azure Functions"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "AI Engineer",
+      "company": "Movate",
+      "period": "Jun 2024 – Present",
+      "summary": "Enterprise generative AI for clients including Alcatel-Lucent Enterprise and Nokia.",
+      "points": [
+        "Designed and refined prompts and RAG workflows for enterprise LLM applications, using contextual enrichment to ground responses.",
+        "Built modular LangChain/LangGraph workflows with conditional routing, tool invocation and conversation state for multi-step tasks.",
+        "Integrated Azure OpenAI, Gemini/Vertex AI, Amazon Bedrock (Claude) and Groq with Python services and REST APIs.",
+        "Implemented Flask/REST integrations and SSE streaming for conversational responses, with grounding metadata and model safety settings.",
+        "Developed reusable Python modules for Dialogflow intent-creation automation, web scraping and data preprocessing.",
+        "Contributed to prototypes in agentic AI, RAG-to-DAX automation, customer-support analysis, fraud analysis and semi-agentic chatbots."
+      ]
+    },
+    {
+      "role": "Web Development Intern / Trainee",
+      "company": "NSIC Training Centre",
+      "period": "Jan 2023",
+      "summary": "Web development training and internship.",
+      "points": []
+    },
+    {
+      "role": "Java Intern",
+      "company": "Shiash Infotech Solutions",
+      "period": "Aug – Oct 2022",
+      "summary": "Java development internship.",
+      "points": []
+    }
+  ],
+  "projects": [
+    {
+      "title": "Agent-Native Conversational Chatbot",
+      "type": "enterprise",
+      "client": "Alcatel-Lucent Enterprise",
+      "builtAt": "Movate",
+      "category": "Agentic AI",
+      "image": "/projects/ale-agent-chatbot.svg",
+      "imageAlt": "Architecture: a customer message goes to a LangGraph orchestrator, which uses a Neo4j GraphRAG intent map to route it to support, knowledge or ticketing agents; the ticketing agent calls a Salesforce MCP tool to raise a ticket.",
+      "summary": "An agent-native support chatbot that orchestrates specialised agents over a knowledge graph and live Salesforce tools.",
+      "highlights": [
+        "LangGraph orchestrator routes user intents to specialised support agents.",
+        "Neo4j knowledge graph with Cypher-based GraphRAG maps each query to the right agent.",
+        "Salesforce APIs exposed as MCP tools so a ReAct agent can raise support tickets on request.",
+        "Logging, safety guardrails, checkpointed conversation history and per-user session isolation."
+      ],
+      "impact": "Used regularly by 200+ users in production",
+      "tech": [
+        "LangGraph",
+        "Amazon Bedrock (Claude)",
+        "Neo4j",
+        "MCP",
+        "SSE",
+        "Python"
+      ],
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "title": "AI Document Extraction & Analytics View",
+      "type": "enterprise",
+      "client": "Nokia",
+      "builtAt": "Movate",
+      "category": "Document AI",
+      "image": "/projects/nokia-doc-analytics.svg",
+      "imageAlt": "Architecture: business documents pass through a private LLM gateway into MySQL; an engineer's question goes through a LangGraph router to a SQL agent that queries MySQL and returns an answer and an analytics view.",
+      "summary": "Turns unstructured business documents into queryable data, with a chatbot and an analytics view on top.",
+      "highlights": [
+        "LLM workflows extract and structure information from business documents into MySQL.",
+        "LangGraph routes natural-language chatbot and analytics questions to a SQL-based agent.",
+        "Integrated an enterprise private LLM gateway for document understanding and extraction.",
+        "Structured outputs feed downstream reporting, analytics and information retrieval."
+      ],
+      "impact": "Used by network engineers for technical queries and analytics",
+      "tech": [
+        "LangGraph",
+        "Private LLM Gateway",
+        "MySQL",
+        "Python"
+      ],
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "title": "Natural Language to Pandas Analytics",
+      "type": "enterprise",
+      "category": "LLM Apps",
+      "image": "/projects/nl-to-pandas.svg",
+      "imageAlt": "A plain-English question becomes generated pandas code, which passes syntax, logic and generated test-case checks with bounded retries before returning a results table.",
+      "summary": "Ask a business dataset a question in plain English and get validated pandas code and the answer back.",
+      "highlights": [
+        "Turns questions plus DataFrame schemas into pandas filtering logic.",
+        "Syntax and logic checks, generated test cases and bounded retries catch bad code before it runs."
+      ],
+      "impact": "Catches invalid or incorrect generated code before it runs",
+      "tech": [
+        "Python",
+        "Streamlit",
+        "Pandas",
+        "Groq",
+        "Gemini"
+      ],
+      "repo": "",
+      "demo": "",
+      "builtAt": "Movate",
+      "client": ""
+    },
+    {
+      "title": "Grounded Q&A with Vertex AI Vector Search",
+      "type": "enterprise",
+      "category": "RAG",
+      "image": "/projects/vertex-grounded-qa.svg",
+      "imageAlt": "A question is embedded with BGE, matched against a Vertex AI Vector Search index, and the top retrieved passages ground a Gemini answer with citations.",
+      "summary": "Semantic retrieval over a Vertex AI Vector Search index, grounding Gemini answers in retrieved sources.",
+      "highlights": [
+        "Index and endpoint built on BAAI/bge-small-en-v1.5 embeddings.",
+        "Retrieved context feeds Gemini, with attention to grounding, retrieval quality and safety settings."
+      ],
+      "impact": "Answers grounded in retrieved sources",
+      "tech": [
+        "Vertex AI",
+        "Gemini",
+        "BGE embeddings",
+        "Python"
+      ],
+      "repo": "",
+      "demo": "",
+      "builtAt": "Movate",
+      "client": ""
+    },
+    {
+      "title": "Visionary Portfolio",
+      "type": "personal",
+      "category": "Web",
+      "image": "/projects/visionary-portfolio.svg",
+      "imageAlt": "A glass-styled website mock-up beside a security shield listing CSP, rate limiting, input validation and honeypot protection.",
+      "summary": "This site: React and Flask with glass UI and motion design, plus a hardened contact API.",
+      "highlights": [
+        "Strict validation, rate limiting, CSP and email header-injection protection.",
+        "Self-hosted fonts, no third-party scripts, responsive down to phone width."
+      ],
+      "impact": "Secure by default",
+      "tech": [
+        "React",
+        "Framer Motion",
+        "Flask",
+        "Security"
+      ],
+      "repo": "",
+      "demo": ""
+    }
+  ],
+  "achievements": [
+    {
+      "year": "",
+      "title": "Hackathon Judge",
+      "org": "24-hour hackathon · Velammal Engineering College",
+      "detail": "Evaluated student teams' builds over a 24-hour hackathon.",
+      "icon": "trophy"
+    },
+    {
+      "year": "",
+      "title": "Technical Blog Author",
+      "org": "Low-code GenAI automation",
+      "detail": "Wrote about using low-code generative AI to automate business processes.",
+      "icon": "pen"
+    },
+    {
+      "year": "",
+      "title": "Google Data Analytics Certificate",
+      "org": "Coursera",
+      "detail": "Professional certificate in data cleaning, analysis and visualisation.",
+      "icon": "badge"
+    },
+    {
+      "year": "2020 – 2024",
+      "title": "B.E. Computer Science & Engineering",
+      "org": "Velammal Engineering College, Chennai",
+      "detail": "Graduated with a CGPA of 8.4 / 10.",
+      "icon": "grad"
+    },
+    {
+      "year": "",
+      "title": "C Programming Course",
+      "org": "Certification",
+      "detail": "Foundations of systems programming in C.",
+      "icon": "code"
+    }
+  ]
+}
