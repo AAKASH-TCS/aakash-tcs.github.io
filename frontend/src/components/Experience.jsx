@@ -9,7 +9,7 @@ export default function Experience({ items }) {
 
   return (
     <section id="experience" className="section" aria-labelledby="experience-title">
-      <SectionHeading eyebrow="Experience" title="Where I build" id="experience-title" />
+      <SectionHeading eyebrow="Experience" title="Where I've worked" id="experience-title" />
 
       <div className="experience">
         <GlassCard as="article" className="job job--current" {...stagger(0)}>

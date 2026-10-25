@@ -19,8 +19,8 @@ export default function Skills({ skills }) {
   const all = skills.flatMap((g) => g.items)
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">
-      <SectionHeading eyebrow="Toolkit" title="The stack behind the magic" id="skills-title">
-        From prompt to production: the tools I use to design, ship and run intelligent systems.
+      <SectionHeading eyebrow="Toolkit" title="What I work with" id="skills-title">
+        The tools I reach for, from the first prompt to the thing that's running in production.
       </SectionHeading>
 
       <div className="bento bento--skills">

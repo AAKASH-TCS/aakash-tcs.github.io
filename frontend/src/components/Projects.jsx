@@ -10,14 +10,14 @@ const GROUPS = [
   {
     type: 'enterprise',
     Icon: Building2,
-    title: 'Enterprise work',
-    blurb: 'Systems I built as an AI Engineer at Movate, for enterprise clients and internal use. This work is confidential, so the images show the architecture, not the product.',
+    title: 'Work at Movate',
+    blurb: 'Built as an AI Engineer at Movate. The real systems belong to the clients, so these pictures show how they work rather than what they look like.',
   },
   {
     type: 'personal',
     Icon: FlaskConical,
     title: 'Personal projects',
-    blurb: 'Things I build on my own to explore new models, retrieval techniques and ideas.',
+    blurb: 'What I build when nobody is paying me to.',
   },
 ]
 
@@ -132,8 +132,8 @@ function CompactCard({ project, index }) {
 export default function Projects({ projects }) {
   return (
     <section id="projects" className="section" aria-labelledby="projects-title">
-      <SectionHeading eyebrow="Projects" title="What I've built" id="projects-title">
-        Agentic AI, RAG and LLM systems: production work for enterprise clients, and projects of my own.
+      <SectionHeading eyebrow="Projects" title="Things I've built" id="projects-title">
+        Production work for enterprise clients, plus Cortana, the assistant I build for myself after hours.
       </SectionHeading>
 
       {GROUPS.map(({ type, Icon, title, blurb }) => {

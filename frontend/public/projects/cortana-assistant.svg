@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05071a"/>
+      <stop offset=".55" stop-color="#0a0f2c"/>
+      <stop offset="1" stop-color="#050b18"/>
+    </linearGradient>
+    <radialGradient id="aurA" cx=".2" cy=".15" r=".55"><stop offset="0" stop-color="#7c3aed" stop-opacity=".55"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <radialGradient id="aurB" cx=".85" cy=".85" r=".55"><stop offset="0" stop-color="#06b6d4" stop-opacity=".4"/><stop offset="1" stop-color="#06b6d4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="aurC" cx=".5" cy=".5" r=".35"><stop offset="0" stop-color="#22d3ee" stop-opacity=".35"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+
+    <!-- Plasma core -->
+    <radialGradient id="core" cx=".42" cy=".38" r=".7">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".12" stop-color="#cffafe"/>
+      <stop offset=".35" stop-color="#22d3ee"/>
+      <stop offset=".65" stop-color="#6366f1"/>
+      <stop offset=".9" stop-color="#7c3aed" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset=".55" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset=".72" stop-color="#22d3ee" stop-opacity=".35"/>
+      <stop offset=".85" stop-color="#a78bfa" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#a78bfa" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset=".55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".04"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".55"/></filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#aurA)"/>
+  <rect width="800" height="450" fill="url(#aurB)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#aurC)"/>
+  <g fill="#fff">
+    <circle cx="96" cy="54" r="1.2" opacity=".6"/><circle cx="246" cy="30" r="1" opacity=".5"/><circle cx="560" cy="40" r="1.3" opacity=".6"/>
+    <circle cx="712" cy="96" r="1" opacity=".5"/><circle cx="46" cy="300" r="1.1" opacity=".4"/><circle cx="760" cy="300" r="1.2" opacity=".5"/>
+    <circle cx="610" cy="420" r="1" opacity=".4"/><circle cx="180" cy="430" r="1.2" opacity=".4"/><circle cx="470" cy="18" r="1" opacity=".5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="32" y="44" fill="#e8eaf6" font-size="15" font-weight="700" letter-spacing="6">CORTANA</text>
+  <text x="32" y="64" fill="#8b93bd" font-size="11" letter-spacing="2">PERSONAL AI ASSISTANT</text>
+
+  <!-- Orb -->
+  <g transform="translate(400 222)">
+    <circle r="150" fill="url(#halo)"/>
+    <circle r="96" fill="#22d3ee" opacity=".45" filter="url(#glow)"/>
+    <ellipse rx="170" ry="52" fill="none" stroke="url(#ring)" stroke-width="1.6" opacity=".75" transform="rotate(-18)"/>
+    <ellipse rx="150" ry="150" fill="none" stroke="#22d3ee" stroke-opacity=".18" stroke-dasharray="2 8"/>
+    <ellipse rx="128" ry="40" fill="none" stroke="url(#ring)" stroke-width="1.2" opacity=".55" transform="rotate(28)"/>
+    <circle r="82" fill="url(#core)"/>
+    <path d="M-58 -10c18-30 52-40 80-22s30 52 6 70" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" filter="url(#soft)"/>
+    <path d="M-40 30c20 18 52 18 70-2" fill="none" stroke="#e0f2fe" stroke-opacity=".3" stroke-width="2" filter="url(#soft)"/>
+    <circle cx="-26" cy="-30" r="16" fill="#fff" opacity=".55" filter="url(#soft)"/>
+    <!-- orbiting nodes -->
+    <circle cx="112" cy="-104" r="4.5" fill="#22d3ee"/><circle cx="112" cy="-104" r="10" fill="#22d3ee" opacity=".25"/>
+    <circle cx="-150" cy="50" r="4" fill="#f472b6"/><circle cx="-150" cy="50" r="9" fill="#f472b6" opacity=".25"/>
+    <circle cx="-30" cy="-148" r="3.5" fill="#a78bfa"/>
+  </g>
+
+  <!-- Voice waveform under the orb -->
+  <g transform="translate(400 376)" fill="url(#acc)">
+    <rect x="-86" y="-4" width="6" height="8" rx="3"/><rect x="-74" y="-8" width="6" height="16" rx="3"/>
+    <rect x="-62" y="-14" width="6" height="28" rx="3"/><rect x="-50" y="-9" width="6" height="18" rx="3"/>
+    <rect x="-38" y="-20" width="6" height="40" rx="3"/><rect x="-26" y="-12" width="6" height="24" rx="3"/>
+    <rect x="-14" y="-24" width="6" height="48" rx="3"/><rect x="-2" y="-16" width="6" height="32" rx="3"/>
+    <rect x="10" y="-22" width="6" height="44" rx="3"/><rect x="22" y="-10" width="6" height="20" rx="3"/>
+    <rect x="34" y="-18" width="6" height="36" rx="3"/><rect x="46" y="-8" width="6" height="16" rx="3"/>
+    <rect x="58" y="-13" width="6" height="26" rx="3"/><rect x="70" y="-6" width="6" height="12" rx="3"/>
+    <rect x="82" y="-3" width="6" height="6" rx="3"/>
+  </g>
+  <text x="400" y="420" fill="#8b93bd" font-size="12" text-anchor="middle" letter-spacing="3">LISTENING</text>
+
+  <!-- Memory card -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="96" width="232" height="112" rx="18" fill="url(#card)" stroke="#fff" stroke-opacity=".2"/>
+  </g>
+  <rect x="44" y="112" width="26" height="26" rx="8" fill="#a78bfa" fill-opacity=".25"/>
+  <circle cx="55" cy="123" r="6" fill="none" stroke="#c4b5fd" stroke-width="2"/><path d="M60 128l5 5" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <text x="80" y="130" fill="#c4b5fd" font-size="11" font-weight="700" letter-spacing="1.5">MEMORY · LAST TUESDAY</text>
+  <text x="44" y="162" fill="#e8eaf6" font-size="13.5">"We picked BGE-M3 for the</text>
+  <text x="44" y="181" fill="#e8eaf6" font-size="13.5">embeddings. You said the other</text>
+  <text x="44" y="198" fill="#e8eaf6" font-size="13.5">one was 'fine, I guess'."</text>
+
+  <!-- Research card -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="96" width="232" height="112" rx="18" fill="url(#card)" stroke="#fff" stroke-opacity=".2"/>
+  </g>
+  <rect x="556" y="112" width="26" height="26" rx="8" fill="#22d3ee" fill-opacity=".2"/>
+  <path d="M563 118h10l4 4v11h-14z" fill="none" stroke="#67e8f9" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M566 126h8M566 130h6" stroke="#67e8f9" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="592" y="130" fill="#67e8f9" font-size="11" font-weight="700" letter-spacing="1.5">RESEARCH MISSION</text>
+  <text x="556" y="162" fill="#e8eaf6" font-size="13.5">Free hosting for always-on</text>
+  <text x="556" y="180" fill="#e8eaf6" font-size="13.5">AI apps</text>
+  <rect x="556" y="190" width="200" height="6" rx="3" fill="#fff" fill-opacity=".1"/>
+  <rect x="556" y="190" width="164" height="6" rx="3" fill="url(#acc)"/>
+  <text x="756" y="181" fill="#8b93bd" font-size="11" text-anchor="end">82%</text>
+
+  <!-- Voice lock chip -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="330" width="208" height="48" rx="24" fill="url(#card)" stroke="#34d399" stroke-opacity=".45"/>
+  </g>
+  <circle cx="54" cy="354" r="12" fill="#34d399" fill-opacity=".2"/>
+  <path d="M48 354l4 4 8-8" stroke="#34d399" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="74" y="350" fill="#e8eaf6" font-size="13" font-weight="600">Voice lock: it's you</text>
+  <text x="74" y="366" fill="#8b93bd" font-size="11">speaker verified on-device</text>
+
+  <!-- Knowledge base chip -->
+  <g filter="url(#shadow)">
+    <rect x="564" y="330" width="208" height="48" rx="24" fill="url(#card)" stroke="#a78bfa" stroke-opacity=".45"/>
+  </g>
+  <circle cx="590" cy="354" r="12" fill="#a78bfa" fill-opacity=".22"/>
+  <ellipse cx="590" cy="349" rx="6" ry="2.5" fill="none" stroke="#c4b5fd" stroke-width="1.6"/>
+  <path d="M584 349v9c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-9" fill="none" stroke="#c4b5fd" stroke-width="1.6"/>
+  <text x="610" y="350" fill="#e8eaf6" font-size="13" font-weight="600">Knowledge base</text>
+  <text x="610" y="366" fill="#8b93bd" font-size="11">answers from my own PDFs</text>
+
+  <!-- Connectors -->
+  <g stroke="#22d3ee" stroke-opacity=".35" stroke-width="1.2" stroke-dasharray="3 5" fill="none">
+    <path d="M260 160C300 170 300 190 318 200"/>
+    <path d="M540 160C500 170 500 190 482 200"/>
+    <path d="M236 350C280 340 300 300 326 284"/>
+    <path d="M564 350C520 340 500 300 474 284"/>
+  </g>
+</svg>

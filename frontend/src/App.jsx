@@ -17,7 +17,7 @@ function Loader() {
   return (
     <div className="state-screen" role="status" aria-live="polite">
       <div className="loader-orb" aria-hidden="true" />
-      <p>Booting up the automations…</p>
+      <p>Warming up…</p>
     </div>
   )
 }
@@ -25,7 +25,7 @@ function Loader() {
 function ErrorState({ onRetry }) {
   return (
     <div className="state-screen" role="alert">
-      <p>Couldn't load the portfolio content. Is the API running?</p>
+      <p>The page content didn't load. Give it another go?</p>
       <button className="btn btn-ghost" onClick={onRetry}>
         <RefreshCw size={16} aria-hidden="true" /> Try again
       </button>

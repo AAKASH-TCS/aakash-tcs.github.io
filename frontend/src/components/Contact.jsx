@@ -22,8 +22,8 @@ function ContactLinks({ profile }) {
   const linkedin = safeUrl(profile.socials?.linkedin)
   return (
     <GlassCard className="contact-form contact-links" {...stagger(1)}>
-      <h3>Get in touch</h3>
-      <p>The quickest way to reach me is by email or a message on LinkedIn.</p>
+      <h3>Drop me a line</h3>
+      <p>Email is quickest. LinkedIn works too, if you'd rather keep things professional.</p>
       <div className="contact-actions">
         {email && (
           <a className="btn btn-primary" href={gmailCompose(email)} target="_blank" rel="noopener noreferrer">
@@ -106,10 +106,10 @@ export default function Contact({ profile }) {
         website: values.website,
       })
       setValues(EMPTY)
-      setStatus({ state: 'success', message: "Thanks! Your message is on its way. I'll get back to you soon." })
+      setStatus({ state: 'success', message: "Got it, thanks! I'll get back to you soon." })
     } catch (err) {
       if (err.fields) setErrors(err.fields)
-      const message = err.status === 429 ? "You've sent a few messages already. Please try again a bit later." : err.message || 'Something went wrong.'
+      const message = err.status === 429 ? "That's a few messages already. Give it a little while and try again." : err.message || 'Something went wrong.'
       setStatus({ state: 'error', message })
     }
   }
@@ -118,21 +118,21 @@ export default function Contact({ profile }) {
 
   return (
     <section id="contact" className="section" aria-labelledby="contact-title">
-      <SectionHeading eyebrow="Contact" title="Let's automate something remarkable" id="contact-title">
-        Have an idea, a repetitive process you'd like gone, or just want to talk AI? Drop me a message.
+      <SectionHeading eyebrow="Contact" title="Say hello" id="contact-title">
+        Got a process that eats your team's week, an idea for an agent, or just want to talk AI? I'd like to hear it.
       </SectionHeading>
 
       <div className="contact-grid">
         <GlassCard className="contact-info" {...stagger(0)}>
           <div className="contact-badge"><Mail size={22} aria-hidden="true" /></div>
-          <h3>What I can help with</h3>
+          <h3>Things I can help with</h3>
           <ul className="contact-list">
-            <li>Agentic AI with LangGraph, tool calling & MCP</li>
-            <li>RAG and GraphRAG over your own data</li>
-            <li>LLM integrations: Azure OpenAI, Gemini, Bedrock, Groq</li>
-            <li>Python backends with Flask/FastAPI & streaming</li>
+            <li>AI agents that use real tools (LangGraph, MCP)</li>
+            <li>Search and Q&amp;A over your own documents (RAG, GraphRAG)</li>
+            <li>Hooking LLMs into the systems you already have</li>
+            <li>Python backends that stream answers as they're written</li>
           </ul>
-          <p className="contact-note"><Clock size={16} aria-hidden="true" /> Usually replies within 24–48 hours</p>
+          <p className="contact-note"><Clock size={16} aria-hidden="true" /> I usually reply within a day or two</p>
           {!STATIC_SITE && socials.length > 0 && (
             <div className="socials">
               {socials.map(({ key, label, Icon, href }) => (

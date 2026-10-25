@@ -82,7 +82,7 @@ export default function Navbar({ initials }) {
           <button className="icon-btn" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
             <ThemeIcon size={18} aria-hidden="true" />
           </button>
-          <a href="#contact" className="btn btn-primary btn-sm nav-cta">Hire me</a>
+          <a href="#contact" className="btn btn-primary btn-sm nav-cta">Say hello</a>
           <button
             className="icon-btn nav-burger"
             onClick={() => setOpen((o) => !o)}

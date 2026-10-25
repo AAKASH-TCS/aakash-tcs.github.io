@@ -52,11 +52,11 @@ function AutomationConsole() {
 export default function About({ profile }) {
   return (
     <section id="about" className="section" aria-labelledby="about-title">
-      <SectionHeading eyebrow="About" title="Making life easier, one automation at a time" id="about-title" />
+      <SectionHeading eyebrow="About" title="I like it when computers do the boring bits" id="about-title" />
 
       <div className="bento bento--about">
         <GlassCard className="about-text" {...stagger(0)}>
-          <h3>Curious by default</h3>
+          <h3>The short version</h3>
           {profile.about.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
         </GlassCard>
 

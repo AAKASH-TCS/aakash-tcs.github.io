@@ -6,11 +6,11 @@
     "Generative AI Engineer",
     "Agentic AI Builder",
     "RAG & GraphRAG Engineer",
-    "AI Automation Enthusiast"
+    "Professional Busywork Remover"
   ],
-  "tagline": "I build agentic AI systems, RAG pipelines and LLM automations that take the busywork off people's plates, so they can focus on what matters.",
+  "tagline": "I build AI agents and automations that take the boring parts of people's jobs off their hands. Mostly in Python, usually with LangGraph, occasionally at 2 a.m.",
   "location": "India",
-  "availability": "AI Engineer at Movate · building agentic AI",
+  "availability": "Currently building AI agents at Movate",
   "resumeUrl": "/Aakash-TCS-Resume.pdf",
   "email": "aakashtcs123@gmail.com",
   "socials": {
@@ -19,29 +19,29 @@
     "x": ""
   },
   "about": [
-    "I'm an AI Engineer at Movate, where I design multi-agent LangGraph workflows, RAG and GraphRAG pipelines, and LLM integrations for enterprise clients such as Alcatel-Lucent Enterprise and Nokia.",
-    "My work runs from prompt and retrieval design to production Python services: tool-calling agents over MCP, streaming responses over SSE, and the guardrails, logging and session isolation that keep them dependable. I'm always asking how AI can make someone's day a little easier."
+    "I'm an AI Engineer at Movate. Day to day, I build multi-agent workflows with LangGraph, retrieval systems that show their sources, and the plumbing that connects LLMs to real business tools, for clients like Alcatel-Lucent Enterprise and Nokia.",
+    "I care about the unglamorous parts too: guardrails, logging, and keeping one user's conversation well away from another's. An agent that's clever but unreliable is just a very confident intern. After hours I'm building Cortana, my own assistant, mostly to see how far one person can push it."
   ],
   "stats": [
     {
       "value": 2,
       "suffix": "+",
-      "label": "Years as an AI Engineer"
+      "label": "Years building with LLMs at work"
     },
     {
       "value": 200,
       "suffix": "+",
-      "label": "Production users on my agent chatbot"
+      "label": "People using my support chatbot"
     },
     {
       "value": 4,
       "suffix": "",
-      "label": "LLM platforms integrated"
+      "label": "LLM platforms I've wired up"
     },
     {
       "value": 2,
       "suffix": "",
-      "label": "Enterprise clients (ALE · Nokia)"
+      "label": "Enterprise clients (ALE and Nokia)"
     }
   ],
   "skills": [
@@ -124,7 +124,7 @@
       "role": "AI Engineer",
       "company": "Movate",
       "period": "Jun 2024 – Present",
-      "summary": "Enterprise generative AI for clients including Alcatel-Lucent Enterprise and Nokia.",
+      "summary": "Building generative AI for enterprise clients, including Alcatel-Lucent Enterprise and Nokia.",
       "points": [
         "Designed and refined prompts and RAG workflows for enterprise LLM applications, using contextual enrichment to ground responses.",
         "Built modular LangChain/LangGraph workflows with conditional routing, tool invocation and conversation state for multi-step tasks.",
@@ -138,14 +138,14 @@
       "role": "Web Development Intern / Trainee",
       "company": "NSIC Training Centre",
       "period": "Jan 2023",
-      "summary": "Web development training and internship.",
+      "summary": "Learned how the web fits together, one form and one stylesheet at a time.",
       "points": []
     },
     {
       "role": "Java Intern",
       "company": "Shiash Infotech Solutions",
       "period": "Aug – Oct 2022",
-      "summary": "Java development internship.",
+      "summary": "Wrote a lot of Java and learned to read a stack trace without panicking.",
       "points": []
     }
   ],
@@ -158,14 +158,14 @@
       "category": "Agentic AI",
       "image": "/projects/ale-agent-chatbot.svg",
       "imageAlt": "Architecture: a customer message goes to a LangGraph orchestrator, which uses a Neo4j GraphRAG intent map to route it to support, knowledge or ticketing agents; the ticketing agent calls a Salesforce MCP tool to raise a ticket.",
-      "summary": "An agent-native support chatbot that orchestrates specialised agents over a knowledge graph and live Salesforce tools.",
+      "summary": "A support chatbot where a small team of specialised agents, not one overworked model, handles each request. It works out what the customer needs, hands it to the right agent, and can raise a Salesforce ticket on its own.",
       "highlights": [
-        "LangGraph orchestrator routes user intents to specialised support agents.",
-        "Neo4j knowledge graph with Cypher-based GraphRAG maps each query to the right agent.",
-        "Salesforce APIs exposed as MCP tools so a ReAct agent can raise support tickets on request.",
-        "Logging, safety guardrails, checkpointed conversation history and per-user session isolation."
+        "A LangGraph orchestrator passes each request to the agent best suited to it.",
+        "A Neo4j knowledge graph, queried with Cypher-based GraphRAG, decides which agent that is.",
+        "Salesforce APIs are exposed as MCP tools, so a ReAct agent can raise a ticket when someone asks for one.",
+        "Guardrails, logging, saved conversation history, and separate sessions so nobody sees anyone else's chat."
       ],
-      "impact": "Used regularly by 200+ users in production",
+      "impact": "200+ people use it regularly in production",
       "tech": [
         "LangGraph",
         "Amazon Bedrock (Claude)",
@@ -185,14 +185,14 @@
       "category": "Document AI",
       "image": "/projects/nokia-doc-analytics.svg",
       "imageAlt": "Architecture: business documents pass through a private LLM gateway into MySQL; an engineer's question goes through a LangGraph router to a SQL agent that queries MySQL and returns an answer and an analytics view.",
-      "summary": "Turns unstructured business documents into queryable data, with a chatbot and an analytics view on top.",
+      "summary": "Useful answers were buried in business documents. This pulls them out into a database, then lets engineers ask questions in plain English and get answers and charts back.",
       "highlights": [
-        "LLM workflows extract and structure information from business documents into MySQL.",
-        "LangGraph routes natural-language chatbot and analytics questions to a SQL-based agent.",
-        "Integrated an enterprise private LLM gateway for document understanding and extraction.",
-        "Structured outputs feed downstream reporting, analytics and information retrieval."
+        "LLM workflows read business documents and store the structured results in MySQL.",
+        "LangGraph sends chat and analytics questions to a SQL agent that knows the schema.",
+        "Document understanding runs through an enterprise private LLM gateway.",
+        "The structured output feeds reporting, analytics and search further down the line."
       ],
-      "impact": "Used by network engineers for technical queries and analytics",
+      "impact": "Network engineers use it for technical questions and analytics",
       "tech": [
         "LangGraph",
         "Private LLM Gateway",
@@ -208,12 +208,12 @@
       "category": "LLM Apps",
       "image": "/projects/nl-to-pandas.svg",
       "imageAlt": "A plain-English question becomes generated pandas code, which passes syntax, logic and generated test-case checks with bounded retries before returning a results table.",
-      "summary": "Ask a business dataset a question in plain English and get validated pandas code and the answer back.",
+      "summary": "Ask a dataset a question in plain English and get the answer back, without anyone hand-writing pandas. The generated code has to pass its checks before anyone trusts it.",
       "highlights": [
-        "Turns questions plus DataFrame schemas into pandas filtering logic.",
-        "Syntax and logic checks, generated test cases and bounded retries catch bad code before it runs."
+        "Turns a question plus the DataFrame's schema into pandas filtering code.",
+        "Checks syntax and logic, runs generated test cases, and retries a limited number of times before giving up gracefully."
       ],
-      "impact": "Catches invalid or incorrect generated code before it runs",
+      "impact": "Bad code gets caught before it runs, not after",
       "tech": [
         "Python",
         "Streamlit",
@@ -232,12 +232,12 @@
       "category": "RAG",
       "image": "/projects/vertex-grounded-qa.svg",
       "imageAlt": "A question is embedded with BGE, matched against a Vertex AI Vector Search index, and the top retrieved passages ground a Gemini answer with citations.",
-      "summary": "Semantic retrieval over a Vertex AI Vector Search index, grounding Gemini answers in retrieved sources.",
+      "summary": "Answers questions from a document collection, and only from it. If the answer isn't in the sources, it shouldn't be in the reply.",
       "highlights": [
-        "Index and endpoint built on BAAI/bge-small-en-v1.5 embeddings.",
-        "Retrieved context feeds Gemini, with attention to grounding, retrieval quality and safety settings."
+        "Vertex AI Vector Search index and endpoint built on BAAI/bge-small-en-v1.5 embeddings.",
+        "Retrieved passages feed Gemini, with care taken over grounding, retrieval quality and safety settings."
       ],
-      "impact": "Answers grounded in retrieved sources",
+      "impact": "Every answer is backed by a retrieved source",
       "tech": [
         "Vertex AI",
         "Gemini",
@@ -250,22 +250,27 @@
       "client": ""
     },
     {
-      "title": "Visionary Portfolio",
+      "title": "Cortana: My Personal AI Assistant",
       "type": "personal",
-      "category": "Web",
-      "image": "/projects/visionary-portfolio.svg",
-      "imageAlt": "A glass-styled website mock-up beside a security shield listing CSP, rate limiting, input validation and honeypot protection.",
-      "summary": "This site: React and Flask with glass UI and motion design, plus a hardened contact API.",
+      "category": "AI Assistant",
+      "image": "/projects/cortana-assistant.svg",
+      "imageAlt": "A glowing holographic orb representing Cortana, surrounded by glass cards: a recalled memory from a past conversation, a research dossier in progress, a voice-lock check, and a listening waveform.",
+      "summary": "My own Halo-inspired assistant, and my favourite after-hours project. She talks in real time, remembers what we discussed last week, and goes off to research things while I get on with my day. She also has opinions about my workout form.",
       "highlights": [
-        "Strict validation, rate limiting, CSP and email header-injection protection.",
-        "Self-hosted fonts, no third-party scripts, responsive down to phone width."
+        "Remembers our conversations. Each session is summarised and stored, so I can ask what we decided about something last week and she'll find it.",
+        "Keeps a separate memory of facts I ask her to hold on to, and brings them up when they're relevant.",
+        "Runs research missions in the background: she searches the web, then writes up a full dossier, in the style of a Halo intelligence briefing.",
+        "Answers from my own PDFs, using semantic chunking, FastEmbed vectors and a ClickHouse vector store."
       ],
-      "impact": "Secure by default",
+      "impact": "10 research dossiers written so far, and counting",
       "tech": [
+        "Gemini Live",
+        "Groq",
+        "FastAPI",
         "React",
-        "Framer Motion",
-        "Flask",
-        "Security"
+        "ClickHouse",
+        "SQLite",
+        "FastEmbed"
       ],
       "repo": "",
       "demo": ""
@@ -276,35 +281,35 @@
       "year": "",
       "title": "Hackathon Judge",
       "org": "24-hour hackathon · Velammal Engineering College",
-      "detail": "Evaluated student teams' builds over a 24-hour hackathon.",
+      "detail": "Spent 24 hours judging student teams' projects. Considerably less sleep-deprived than competing.",
       "icon": "trophy"
     },
     {
       "year": "",
       "title": "Technical Blog Author",
       "org": "Low-code GenAI automation",
-      "detail": "Wrote about using low-code generative AI to automate business processes.",
+      "detail": "Wrote about using low-code generative AI to automate everyday business processes.",
       "icon": "pen"
     },
     {
       "year": "",
       "title": "Google Data Analytics Certificate",
       "org": "Coursera",
-      "detail": "Professional certificate in data cleaning, analysis and visualisation.",
+      "detail": "Data cleaning, analysis and visualisation: the unglamorous foundations everything else sits on.",
       "icon": "badge"
     },
     {
       "year": "2020 – 2024",
       "title": "B.E. Computer Science & Engineering",
       "org": "Velammal Engineering College, Chennai",
-      "detail": "Graduated with a CGPA of 8.4 / 10.",
+      "detail": "Graduated with a CGPA of 8.4 out of 10.",
       "icon": "grad"
     },
     {
       "year": "",
       "title": "C Programming Course",
       "org": "Certification",
-      "detail": "Foundations of systems programming in C.",
+      "detail": "Where I first learned that one missing semicolon can ruin an afternoon.",
       "icon": "code"
     }
   ]

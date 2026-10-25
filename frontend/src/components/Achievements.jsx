@@ -12,8 +12,8 @@ export default function Achievements({ items }) {
 
   return (
     <section id="achievements" className="section" aria-labelledby="achievements-title">
-      <SectionHeading eyebrow="Achievements" title="Milestones along the way" id="achievements-title">
-        Education, certifications and community moments that shaped how I build.
+      <SectionHeading eyebrow="Achievements" title="A few things I'm proud of" id="achievements-title">
+        A degree, a couple of certificates, and the time I got to judge a hackathon instead of losing one.
       </SectionHeading>
 
       <div className="timeline" ref={ref}>

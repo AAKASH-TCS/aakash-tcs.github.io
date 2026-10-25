@@ -74,7 +74,7 @@ export default function Hero({ profile }) {
 
         <motion.div className="hero-ctas" {...reveal(0.55)}>
           <MagneticButton href="#projects" className="btn btn-primary">
-            Explore my work <ArrowUpRight size={18} aria-hidden="true" />
+            See what I've built <ArrowUpRight size={18} aria-hidden="true" />
           </MagneticButton>
           {resume ? (
             <MagneticButton
@@ -86,7 +86,7 @@ export default function Hero({ profile }) {
             </MagneticButton>
           ) : (
             <MagneticButton href="#contact" className="btn btn-ghost">
-              Let's talk
+              Say hello
             </MagneticButton>
           )}
         </motion.div>
