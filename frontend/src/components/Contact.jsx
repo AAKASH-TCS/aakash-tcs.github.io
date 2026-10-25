@@ -10,6 +10,12 @@ import { stagger } from '../lib/motion'
 
 const SAFE_EMAIL = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
 
+// Opens Gmail's compose window (new tab) with the recipient and subject filled in.
+function gmailCompose(to) {
+  const params = new URLSearchParams({ view: 'cm', fs: '1', to, su: 'Hello from your portfolio' })
+  return `https://mail.google.com/mail/?${params}`
+}
+
 // Static hosting has no backend, so offer direct links instead of the form.
 function ContactLinks({ profile }) {
   const email = SAFE_EMAIL.test(profile.email ?? '') ? profile.email : null
@@ -20,7 +26,7 @@ function ContactLinks({ profile }) {
       <p>The quickest way to reach me is by email or a message on LinkedIn.</p>
       <div className="contact-actions">
         {email && (
-          <a className="btn btn-primary" href={`mailto:${email}?subject=${encodeURIComponent('Hello from your portfolio')}`}>
+          <a className="btn btn-primary" href={gmailCompose(email)} target="_blank" rel="noopener noreferrer">
             <Mail size={18} aria-hidden="true" /> Email me
           </a>
         )}
