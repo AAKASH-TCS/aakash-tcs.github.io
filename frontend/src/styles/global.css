@@ -622,6 +622,24 @@ main { position: relative; overflow-x: clip; }
   box-shadow: inset 0 -20px 50px -20px color-mix(in srgb, var(--c1) 60%, transparent), 0 30px 80px -30px rgba(0, 0, 0, 0.6);
   animation: float 7s ease-in-out infinite;
 }
+/* Portrait version: the photo fills the glass sphere, ringed in the brand gradient. */
+.orb-core--photo {
+  width: 64%;
+  padding: 5px;
+  overflow: hidden;
+  background: var(--grad);
+  border: 0;
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--c2) 14%, transparent), 0 30px 80px -24px rgba(0, 0, 0, 0.7), 0 0 60px -10px var(--c1);
+}
+.orb-core--photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
 .orb-initials {
   font-family: var(--display);
   font-size: clamp(44px, 7vw, 76px);

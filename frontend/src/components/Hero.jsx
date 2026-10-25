@@ -49,6 +49,7 @@ const reveal = (delay) => ({
 export default function Hero({ profile }) {
   const [first, ...rest] = profile.name.split(' ')
   const resume = safeUrl(profile.resumeUrl)
+  const photo = safeUrl(profile.photo)
 
   return (
     <section id="top" className="hero section" aria-labelledby="hero-title">
@@ -106,10 +107,16 @@ export default function Hero({ profile }) {
         <div className="orb">
           <div className="orb-ring orb-ring--1" />
           <div className="orb-ring orb-ring--2" />
-          <div className="orb-core">
-            <span className="orb-initials">{profile.initials}</span>
-            <span className="orb-caption">AI · Automation</span>
-          </div>
+          {photo ? (
+            <div className="orb-core orb-core--photo">
+              <img src={photo} alt="" width="640" height="640" decoding="async" fetchPriority="high" />
+            </div>
+          ) : (
+            <div className="orb-core">
+              <span className="orb-initials">{profile.initials}</span>
+              <span className="orb-caption">AI · Automation</span>
+            </div>
+          )}
           {ORBIT_CHIPS.map(({ label, Icon }, i) => (
             <div key={label} className={`orb-chip orb-chip--${i + 1} glass`}>
               <Icon size={14} />
