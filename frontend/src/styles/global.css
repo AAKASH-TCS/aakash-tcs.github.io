@@ -1235,6 +1235,21 @@ main { position: relative; overflow-x: clip; }
   transition: transform 0.18s linear;
   will-change: transform;
 }
+.road-agent { pointer-events: auto; cursor: pointer; }
+.road-agent::after {
+  /* Bigger, invisible hit area: the agent is small and moving. */
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+}
+.road-agent.is-poked .agent-core { animation: agent-boing 0.55s var(--ease); }
+@keyframes agent-boing {
+  20% { transform: scale(1.7, 0.6); }
+  45% { transform: scale(0.7, 1.4); }
+  70% { transform: scale(1.15, 0.9); }
+}
+
 .agent-core {
   position: absolute;
   inset: 7px;
@@ -1348,7 +1363,60 @@ main { position: relative; overflow-x: clip; }
   background: transparent;
   color: var(--muted);
 }
-.hud-btn:hover { color: var(--text); border-color: var(--danger); }
+.hud-btn:hover { color: var(--text); border-color: var(--c2); }
+.hud-btn--quit:hover { border-color: var(--danger); }
+.hud-btn.is-on { color: #fff; background: var(--grad); border-color: transparent; }
+.hud-btn--hint { position: relative; color: var(--c2); }
+.hud-btn--hint::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 10px;
+  border: 2px solid var(--c2);
+  animation: hud-hint 1.6s ease-out infinite;
+}
+@keyframes hud-hint {
+  from { opacity: 0.9; transform: scale(0.9); }
+  to { opacity: 0; transform: scale(1.5); }
+}
+.game-hud { position: fixed; }
+.hud-combo {
+  position: absolute;
+  top: -16px;
+  right: 14px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #1a1305;
+  background: linear-gradient(135deg, #fde68a, #f59e0b);
+  box-shadow: 0 6px 18px -6px #f59e0b;
+}
+
+.confetti {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  z-index: 75;
+  pointer-events: none;
+}
+.confetti span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: hsl(var(--hue) 90% 62%);
+  box-shadow: 0 0 8px hsl(var(--hue) 90% 62% / 0.7);
+  animation: confetti-fly 1.5s var(--delay) cubic-bezier(0.15, 0.7, 0.3, 1) forwards;
+  opacity: 0;
+}
+@keyframes confetti-fly {
+  0% { transform: translate(0, 0) rotate(45deg) scale(0.4); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--dx), calc(var(--dy) + 140px)) rotate(var(--rot)) scale(1); opacity: 0; }
+}
 .hud-xp {
   height: 6px;
   margin: 10px 0 8px;

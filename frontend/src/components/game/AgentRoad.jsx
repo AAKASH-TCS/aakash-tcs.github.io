@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { LEVELS } from '../../lib/game'
+import { LEVELS, emitGame } from '../../lib/game'
 
 const CONTENT_WIDTH = 1180
 const TOKEN_GAP = 230 // px of road between collectible tokens
@@ -166,6 +166,7 @@ export default function AgentRoad({ onTokens }) {
     const s = samples
     let collected = 0
     let frame = 0
+    let initial = true // first sync after (re)planning: no sounds or combos
     tokensRef.current.forEach((el) => el?.classList.remove('is-collected'))
 
     trailRef.current.style.strokeDasharray = `${s.total}`
@@ -196,13 +197,14 @@ export default function AgentRoad({ onTokens }) {
       if (n !== collected) {
         for (let k = collected; k < n; k++) tokensRef.current[k]?.classList.add('is-collected')
         collected = n
-        onTokensRef.current?.(collected, s.tokens.length)
+        onTokensRef.current?.(collected, s.tokens.length, initial)
       }
+      initial = false
     }
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(update)
     }
-    onTokensRef.current?.(0, s.tokens.length)
+    onTokensRef.current?.(0, s.tokens.length, true)
     update()
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
@@ -236,7 +238,17 @@ export default function AgentRoad({ onTokens }) {
           style={{ transform: `translate(${t.x}px, ${t.y}px)` }}
         />
       ))}
-      <div ref={agentRef} className="road-agent">
+      <div
+        ref={agentRef}
+        className="road-agent"
+        onClick={(e) => {
+          const el = e.currentTarget
+          el.classList.remove('is-poked')
+          void el.offsetWidth // restart the wobble animation
+          el.classList.add('is-poked')
+          emitGame('poke')
+        }}
+      >
         <span className="agent-ring" />
         <span className="agent-core" />
       </div>
