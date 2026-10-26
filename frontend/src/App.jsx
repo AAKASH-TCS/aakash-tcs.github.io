@@ -12,6 +12,8 @@ import Achievements from './components/Achievements'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useProfile } from './hooks/useProfile'
+import { useGameMode } from './hooks/useGameMode'
+import GameLayer from './components/game/GameLayer'
 
 function Loader() {
   return (
@@ -35,6 +37,7 @@ function ErrorState({ onRetry }) {
 
 export default function App() {
   const { data, error, retry } = useProfile()
+  const [gameOn, setGameOn] = useGameMode()
 
   return (
     <MotionConfig reducedMotion="user">
@@ -56,6 +59,7 @@ export default function App() {
             <Projects projects={data.projects} />
             <Achievements items={data.achievements} />
             <Contact profile={data} />
+            <GameLayer on={gameOn} setOn={setGameOn} />
           </>
         )}
       </main>

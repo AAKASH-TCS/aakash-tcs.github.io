@@ -4,6 +4,7 @@ import { ArrowDown, ArrowUpRight, Bot, Cpu, Download, MapPin, Sparkles, Workflow
 import Typewriter from './Typewriter'
 import { EASE } from '../lib/motion'
 import { isSameSite, safeUrl } from '../lib/safeUrl'
+import { emitGame } from '../lib/game'
 
 const ORBIT_CHIPS = [
   { label: 'LangGraph Agents', Icon: Bot },
@@ -81,6 +82,7 @@ export default function Hero({ profile }) {
             <MagneticButton
               href={resume}
               className="btn btn-ghost"
+              onClick={() => emitGame('resume')}
               {...(isSameSite(resume) ? { download: '' } : { target: '_blank', rel: 'noopener noreferrer' })}
             >
               <Download size={18} aria-hidden="true" /> Download résumé
@@ -126,6 +128,7 @@ export default function Hero({ profile }) {
         </div>
       </motion.div>
 
+      <span className="play-hint" aria-hidden="true">Scroll to start ▸</span>
       <a href="#about" className="scroll-hint" aria-label="Scroll to About section">
         <ArrowDown size={18} aria-hidden="true" />
       </a>

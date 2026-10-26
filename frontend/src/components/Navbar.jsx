@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
+import { emitGame } from '../lib/game'
 
 const LINKS = [
   { id: 'about', label: 'About' },
@@ -79,7 +80,7 @@ export default function Navbar({ initials }) {
         </ul>
 
         <div className="nav-actions">
-          <button className="icon-btn" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
+          <button className="icon-btn" onClick={() => { toggleTheme(); emitGame('theme', { theme: theme === 'dark' ? 'light' : 'dark' }) }} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
             <ThemeIcon size={18} aria-hidden="true" />
           </button>
           <a href="#contact" className="btn btn-primary btn-sm nav-cta">Say hello</a>

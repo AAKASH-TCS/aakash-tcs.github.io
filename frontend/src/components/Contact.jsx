@@ -7,6 +7,7 @@ import { GithubIcon, LinkedinIcon, XIcon } from './Icon'
 import { STATIC_SITE, sendContact } from '../lib/api'
 import { safeUrl } from '../lib/safeUrl'
 import { stagger } from '../lib/motion'
+import { emitGame } from '../lib/game'
 
 const SAFE_EMAIL = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
 
@@ -26,12 +27,12 @@ function ContactLinks({ profile }) {
       <p>Email is quickest. LinkedIn works too, if you'd rather keep things professional.</p>
       <div className="contact-actions">
         {email && (
-          <a className="btn btn-primary" href={gmailCompose(email)} target="_blank" rel="noopener noreferrer">
+          <a className="btn btn-primary" href={gmailCompose(email)} target="_blank" rel="noopener noreferrer" onClick={() => emitGame('contact')}>
             <Mail size={18} aria-hidden="true" /> Email me
           </a>
         )}
         {linkedin && (
-          <a className="btn btn-ghost" href={linkedin} target="_blank" rel="noopener noreferrer me">
+          <a className="btn btn-ghost" href={linkedin} target="_blank" rel="noopener noreferrer me" onClick={() => emitGame('contact')}>
             <LinkedinIcon width={18} height={18} /> Connect on LinkedIn
           </a>
         )}
@@ -107,6 +108,7 @@ export default function Contact({ profile }) {
       })
       setValues(EMPTY)
       setStatus({ state: 'success', message: "Got it, thanks! I'll get back to you soon." })
+      emitGame('contact')
     } catch (err) {
       if (err.fields) setErrors(err.fields)
       const message = err.status === 429 ? "That's a few messages already. Give it a little while and try again." : err.message || 'Something went wrong.'
